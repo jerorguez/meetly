@@ -1,0 +1,21 @@
+{
+    "name": "jerorguez/meetly",
+    "description": "Event creation and management application",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Database\\" : "database/",
+            "App\\" : "app/",
+            "Router\\" : "router/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jerobel Rodriguez"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.5"
+    }
+}
