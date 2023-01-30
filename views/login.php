@@ -27,7 +27,7 @@
 
                         <form action="login" method="post">
                             <div class="form-outline mb-4">
-                                <input type="email" name="email" id="email" class="form-control" />
+                                <input type="email" name="email" id="email" class="form-control" <?= $_POST['email'] ?? '' ?> />
                                 <label class="form-label" for="form3Example3">Email</label>
                             </div>
 

@@ -10,14 +10,24 @@ class LoginController {
 
         if($_POST) {
 
-            $user = UserController::getInstance()->checkByEmail($_POST['email']);
-    
-            if (password_verify($_POST['password'], $user['password'])) {
+            if (UserController::getInstance()->checkEmailExist($_POST['email'])) {
                 
-                // Code...
+                $user = UserController::getInstance()->checkByEmail($_POST['email']);
+        
+                if (password_verify($_POST['password'], $user['password'])) {
+                    
+                    $_SESSION['id'] = $user['user_id'];
+                    $_SESSION['email'] = $user['email'];
+
+                    header('refresh: 0; url = login');
+                    header('refresh: 0; url = index');
+    
+                } else {
+                    $errorMsg = "Contraseña incorrecta";
+                }
 
             } else {
-                $errorMsg = "Comprueba el email o contraseña";
+                    $errorMsg = "Email no encontrado";
             }
 
         }
@@ -26,6 +36,19 @@ class LoginController {
         require_once('../views/login.php');
     }
 
-    public static function logout() {}
+    public static function checkSecurity() {
+
+        $user = UserController::getInstance()->checkByEmail($_POST['email']);
+
+        if ($_SESSION['id'] !== $user['user_id']) {
+            self::logout();
+        }
+
+    }
+
+    public static function logout() {
+        session_destroy();
+        header('refresh: 0; url = index');
+    }
 
 }

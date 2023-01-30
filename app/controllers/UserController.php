@@ -57,7 +57,7 @@ class UserController implements CrudInterface {
 
         $stm->bindValue(":name", strtolower($data['name']));
         $stm->bindValue(":surname_1", strtolower($data['surname_1']));
-        $stm->bindValue(":surname_2", strtolower($data['surname_2'] === 'null' ? null : $data['surname_2']));
+        $stm->bindValue(":surname_2", strtolower($data['surname_2'] === '' ? null : $data['surname_2']));
         $stm->bindValue(":email", strtolower($data['email']));
         $stm->bindValue(":password", Modules::hashPasswd($data['password']));
 

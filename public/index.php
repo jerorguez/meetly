@@ -5,6 +5,9 @@ require('../vendor/autoload.php');
 use Router\RouterHandler;
 use App\Controllers\UserController;
 use App\Controllers\LoginController;
+use App\Modules\Middleware;
+
+session_start();
 
 $dotenv = \Dotenv\Dotenv::createImmutable('../includes');
 $dotenv->safeLoad();
@@ -17,10 +20,12 @@ $id = $path[1] ?? null;
 
 $router = new RouterHandler();
 
+
 switch ($resource) {
 
     case '/':
     case 'index':
+        Middleware::access('/');
         require_once('../views/frontPage.php');
         break;
 
@@ -31,7 +36,17 @@ switch ($resource) {
         break;
     
     case 'login':
+        Middleware::access('login');
         LoginController::login();
+        break;
+
+    case 'logout':
+        LoginController::logout();
+        break;
+
+    case 'app':
+        Middleware::access('app');
+        require_once('../views/meetlyApp.php');
         break;
 
     default:
