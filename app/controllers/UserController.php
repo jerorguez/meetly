@@ -55,11 +55,11 @@ class UserController implements CrudInterface {
             :password
         )");
 
-        $stm->bindValue(":name", strtolower($data['name']));
-        $stm->bindValue(":surname_1", strtolower($data['surname_1']));
-        $stm->bindValue(":surname_2", strtolower($data['surname_2'] === '' ? null : $data['surname_2']));
-        $stm->bindValue(":email", strtolower($data['email']));
-        $stm->bindValue(":password", Modules::hashPasswd($data['password']));
+        $stm->bindValue(":name", strtolower($data['name']), \PDO::PARAM_STR);
+        $stm->bindValue(":surname_1", strtolower($data['surname_1']), \PDO::PARAM_STR);
+        $stm->bindValue(":surname_2", empty($data['surname_2']) ? null : strtolower($data['username_2']), \PDO::PARAM_STR);
+        $stm->bindValue(":email", strtolower($data['email']), \PDO::PARAM_STR);
+        $stm->bindValue(":password", Modules::hashPasswd($data['password']), \PDO::PARAM_STR);
 
         $stm->execute();
 
