@@ -17,12 +17,19 @@ CREATE TABLE users (
 
 CREATE TABLE events (
     `event_id` INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    `creator_id` INT UNSIGNED,
     `name` VARCHAR(30) NOT NULL,
     `description` VARCHAR(500) NOT NULL,
     `place` VARCHAR(100),
     `date` DATE,
     `create_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    `update_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    `update_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+
+    CONSTRAINT `fk1_event_creator`
+        FOREIGN KEY (`creator_id`) REFERENCES users (`user_id`)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+
 );
 
 CREATE TABLE participants (

@@ -43,7 +43,7 @@
                         <div class="row">
                             <div class="col-md-6 mb-4">
                                 <div class="form-outline">
-                                    <input type="text" name="surname_2" id="surname_2" class="form-control" value="<?= $_POST['surname_2'] ?? ' ' ?>"/>
+                                    <input type="text" name="surname_2" id="surname_2" class="form-control" value="<?= $_POST['surname_2'] ?? '' ?>"/>
                                     <label class="form-label" for="surname_2">Segundo Apellido <sup class="text-primary">( Opcional )</sup></label>
                                 </div>
                             </div>

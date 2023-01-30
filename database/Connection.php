@@ -17,12 +17,18 @@ class Connection {
 
     private function setConnection() : void {
 
-        $connection = new \PDO("mysql:host={$_ENV['DB_HOST']}; dbname={$_ENV['DB_NAME']}", $_ENV['DB_USER'], $_ENV['DB_PASS']);
+        try {
+            
+            $connection = new \PDO("mysql:host={$_ENV['DB_HOST']}; dbname={$_ENV['DB_NAME']}", $_ENV['DB_USER'], $_ENV['DB_PASS']);
+    
+            $setNames = $connection->prepare("SET NAMES 'utf8'");
+            $setNames->execute();
+    
+            $this->connection = $connection;
 
-        $setNames = $connection->prepare("SET NAMES 'utf8'");
-        $setNames->execute();
-
-        $this->connection = $connection;
+        } catch(\PDOException $e){
+            die($e->getMessage());
+        }
 
     }
 
