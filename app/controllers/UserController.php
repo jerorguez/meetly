@@ -21,16 +21,7 @@ class UserController implements CrudInterface {
     }
 
     public function index() : void {
-
-        $stm = $this->connection->prepare("SELECT * FROM users");
-        $stm->execute();
-
-        $response = $stm->fetchAll(\PDO::FETCH_ASSOC);
-
-        echo "<pre>";
-        var_dump($response);
-        echo "</pre>";
-
+        header('Location: 404');
     }
 
     public function create() : void {
@@ -72,13 +63,13 @@ class UserController implements CrudInterface {
         $stm = $this->connection->prepare("SELECT * FROM users WHERE user_id = :id");
         $stm->execute([":id" => $id]);
 
-        $response = $stm->fetch(\PDO::FETCH_ASSOC);
+        return $stm->fetch(\PDO::FETCH_ASSOC);
 
     }
 
-    public function edit() {}
+    public function edit(string $id) : void {}
 
-    public function update() {}
+    public function update(array $data) : void {}
 
     public function destroy(string $id) : void {
 

@@ -5,7 +5,9 @@
 <hr>
 
 <h2>Events</h2>
-<a href="logout" class="btn btn-primary">Logout</a>
+<a href="event/create" class="btn btn-primary">Crear evento</a>
+<a href="event" class="btn btn-primary">Ver eventos</a>
+<a href="event/myevents" class="btn btn-primary">Mis eventos</a>
 
 <hr>
 <a href="logout" class="btn btn-primary">Logout</a>

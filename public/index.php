@@ -4,6 +4,7 @@ require('../vendor/autoload.php');
 
 use Router\RouterHandler;
 use App\Controllers\UserController;
+use App\Controllers\EventController;
 use App\Controllers\LoginController;
 use App\Modules\Middleware;
 
@@ -30,9 +31,15 @@ switch ($resource) {
         break;
 
     case 'user':
-        $router->setMethod($_SERVER['REQUEST_METHOD']);
+        $router->setMethod($_POST['_method'] ?? $_SERVER['REQUEST_METHOD']);
         $router->setData($_POST);
-        $router->route(UserController::class, $id);
+        $router->route(UserController::class, $resource, $id);
+        break;
+    
+    case 'event':
+        $router->setMethod($_POST['_method'] ?? $_SERVER['REQUEST_METHOD']);
+        $router->setData($_POST);
+        $router->route(EventController::class, $resource, $id);
         break;
     
     case 'login':

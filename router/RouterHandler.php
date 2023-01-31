@@ -2,6 +2,8 @@
 
 namespace Router;
 
+use App\Modules\Middleware;
+
 class RouterHandler {
 
     private $method;
@@ -16,7 +18,9 @@ class RouterHandler {
         $this->data = $data;
     }
 
-    public function route($controller, $id) {
+    public function route($controller, $resource, $id) {
+
+        Middleware::access($resource, $id);
 
         $resource = $controller::getInstance();
 
@@ -24,24 +28,43 @@ class RouterHandler {
 
             case "GET":
 
-                if ($id && $id == "create")
+                if ($id == "create")
                     $resource->create();
                 
-                else if ($id) 
-                    $resource->show($id);
+                else if ($id == "myevents")
+                    $resource->getCreatorEvents();
+                    
+                    else
+                    $resource->index();
+                    
+                    break;
+                    
+                    
+            case "POST":
+                        
+                if ($id == "create")
+                $resource->create();
+                
+                else if ($id == "store")
+                $resource->store($this->data);
+
+                else if ($id == "edit")
+                    $resource->edit($this->data['id']);
+                
+                else if ($id == "update")
+                    $resource->update($this->data);
+                
+                else if ($id == "attend")
+                    $resource->attend($this->data['id']);
 
                 else
-                    $resource->index();
+                    header('Location: 404');
 
-                break;
-
-            
-            case "POST":
-                $resource->create();
                 break;
 
             case "delete":
                 $resource->destroy($id);
+                break;
 
         }
 

@@ -36,10 +36,13 @@
                                 <label class="form-label" for="password">Password</label>
                             </div>
 
-                            <div class="text-end">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <a href="user/create" class="text-decoration-none">¿Aún no tienes cuenta? Registrate</a>
                                 <button type="submit" class="btn btn-primary btn-block mb-4">Accede</button>
                             </div>
                         </form>
+
+
                     </div>
                 </div>
             </div>

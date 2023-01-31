@@ -20,7 +20,7 @@ class LoginController {
                     $_SESSION['email'] = $user['email'];
 
                     header('refresh: 0; url = login');
-                    header('refresh: 0; url = index');
+                    header('Location: index');
     
                 } else {
                     $errorMsg = "Contraseña incorrecta";
@@ -48,7 +48,7 @@ class LoginController {
 
     public static function logout() {
         session_destroy();
-        header('refresh: 0; url = index');
+        header('Location: index');
     }
 
 }

@@ -12,7 +12,12 @@ class Middleware {
 
                 case '/':
                 case 'login':
-                    header('refresh: 0; url = app');
+                    header('Location: app');
+                    break;
+
+                case 'user':
+                    if ($id === 'create')
+                        header('Location: ../app');
                     break;
 
             }
@@ -22,7 +27,13 @@ class Middleware {
             switch($resource) {
 
                 case 'app':
-                    header('refresh: 0; url = index');
+                case 'event':
+                    header('Location: index');
+                    break;
+
+                case 'user':
+                    if ($id !== 'create')
+                        header('Location: index');
                     break;
 
             }

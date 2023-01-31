@@ -68,7 +68,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="text-end">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="../login" class="text-decoration-none">¿Eres usuario? Inicia sesión</a>
                             <button type="submit" class="btn btn-primary btn-block mb-4" id="create_user">Enviar</button>
                         </div>
                     </form>

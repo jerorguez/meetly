@@ -28,7 +28,6 @@ CREATE TABLE events (
     CONSTRAINT `fk1_event_creator`
         FOREIGN KEY (`creator_id`) REFERENCES users (`user_id`)
         ON DELETE CASCADE
-        ON UPDATE CASCADE
 
 );
 
@@ -39,11 +38,9 @@ CREATE TABLE participants (
 
     CONSTRAINT `fk1_event`
         FOREIGN KEY (`event_id`) REFERENCES events (`event_id`)
-        ON DELETE CASCADE
-        ON UPDATE CASCADE,
+        ON DELETE CASCADE,
     
     CONSTRAINT `fk2_user`
         FOREIGN KEY (`user_id`) REFERENCES users (`user_id`)
         ON DELETE CASCADE
-        ON UPDATE CASCADE
 );
