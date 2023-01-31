@@ -1,8 +1,19 @@
-<?php require_once(__DIR__ . '/../components/header.php') ?>
+<?php 
+require_once(__DIR__ . '/../components/header.php');
+require_once(__DIR__ . '/../components/headerMeetly.php');
+?>
 
     <div class="container">
         <?php if (empty($response)): ?>
-            <h1>No tienes eventos creados</h1>
+            <section class="d-flex align-items-center justify-content-center">
+                <div class="text-center">
+                    <h1 class="display-1 fw-bold text-primary">:[</h1>
+                    <p class="lead">
+                        <span class="fw-bold">¡Ups!</span>
+                        Parace que no has creado eventos
+                    </p>
+                </div>
+            </section>
         <?php else: ?>
             <?php foreach ($response as $data): ?>    
                 <div class="card m-3">
@@ -18,11 +29,11 @@
                     <div class="card-footer d-flex justify-content-between align-items-center">
                         <p class="m-0"><span class="fw-bold">Fecha: </span><?= $data['date'] ?></p>
                         <div class="d-flex">
-                            <form action="../event/edit" method="post">
+                            <form action="edit" method="post">
                                 <input type="hidden" name="id" value="<?= $data['event_id'] ?>">
                                 <button type="submit" class="btn btn-primary">Editar</button>
                             </form>
-                            <form action="../event/<?= $data['event_id'] ?>" method="post">
+                            <form action="<?= $data['event_id'] ?>" method="post">
                                 <input type="hidden" name="_method" value="delete">
                                 <button type="submit" class="btn btn-danger">Eliminar</button>
                             </form>

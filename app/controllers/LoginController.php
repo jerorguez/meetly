@@ -18,6 +18,7 @@ class LoginController {
                     
                     $_SESSION['id'] = $user['user_id'];
                     $_SESSION['email'] = $user['email'];
+                    $_SESSION['username'] = "{$user['name']} {$user['surname_1']}";
 
                     header('refresh: 0; url = login');
                     header('Location: index');

@@ -10,7 +10,7 @@ class ErrorsForm {
     public static function userForm() {
 
         if (ValidationForm::checkEmptyPost(['surname_2'])) {
-            return "Rellena los campos son obligatorios";
+            return "Rellena los campos obligatorios";
         
         } else if (!ValidationForm::checkString([
                 $_POST['name'], 
@@ -32,6 +32,23 @@ class ErrorsForm {
 
             return "El email ya está registrado.";
 
+        }
+
+    }
+
+    public static function eventForm() {
+
+        if (ValidationForm::checkEmptyPost()) {
+            return "Todos los campos obligatorios";
+        
+        } else if (!ValidationForm::checkString([
+                $_POST['name'], 
+                $_POST['description'],
+                $_POST['place'],
+            ])) {
+
+                return "Ha introducido carácteres inválidos.";
+        
         }
 
     }

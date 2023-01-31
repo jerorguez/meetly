@@ -33,20 +33,26 @@ class RouterHandler {
                 
                 else if ($id == "myevents")
                     $resource->getCreatorEvents();
+       
+                else if ($id == "events")
+                    $resource->getAttendEvents();
                     
-                    else
+                else if ($id == 'show' || isset($id))
                     $resource->index();
-                    
-                    break;
+        
+                else
+                    header('Location: ../404');
+
+                break;
                     
                     
             case "POST":
                         
                 if ($id == "create")
-                $resource->create();
+                    $resource->create();
                 
                 else if ($id == "store")
-                $resource->store($this->data);
+                    $resource->store($this->data);
 
                 else if ($id == "edit")
                     $resource->edit($this->data['id']);
@@ -58,7 +64,7 @@ class RouterHandler {
                     $resource->attend($this->data['id']);
 
                 else
-                    header('Location: 404');
+                    header('Location: ../404');
 
                 break;
 

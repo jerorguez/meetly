@@ -28,16 +28,6 @@
                 </div>
                 <div class="card-footer d-flex justify-content-between align-items-center">
                     <p class="m-0"><span class="fw-bold">Fecha: </span><?= $data['date'] ?></p>
-                    <?php if ($data['creator_id'] !== $_SESSION['id']): ?>
-                        <?php if ($data['attend']): ?>
-                            <button type="submit" class="btn btn-success" disabled>Asistiré</button>
-                        <?php else: ?>
-                            <form action="attend" method="post">
-                                <input type="hidden" name="id" value="<?= $data['event_id'] ?>">
-                                <button type="submit" class="btn btn-primary">Asistiré</button>
-                            </form>
-                        <?php endif; ?>
-                    <?php endif; ?>
                 </div>
             </div>
         <?php endforeach; ?>

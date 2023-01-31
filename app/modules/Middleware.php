@@ -12,12 +12,13 @@ class Middleware {
 
                 case '/':
                 case 'login':
-                    header('Location: app');
+                case 'event' && (empty($id)):
+                    header('Location: event/show');
                     break;
 
                 case 'user':
                     if ($id === 'create')
-                        header('Location: ../app');
+                        header('Location: ../event/show');
                     break;
 
             }

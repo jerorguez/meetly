@@ -24,19 +24,26 @@ class EventController implements CrudInterface {
 
         $stm = $this->connection->prepare("SELECT * FROM events");
         $stm->execute();
-
+        
         $response = $stm->fetchAll(\PDO::FETCH_ASSOC);
-    
+        
         foreach($response as $key => $value) {
             $response[$key]['participants'] = $this->getParticipants($response[$key]['event_id']);
             $response[$key]['creator'] = $this->getCreatorName($response[$key]['creator_id']);
             $response[$key]['attend'] = $this->willIAttend($response[$key]['event_id']);
         }
-
+        
         require('../views/events/showEvents.php');
     }
 
     public function create() : void {
+        if($_POST) {
+            $errorMsg = ErrorsForm::eventForm();
+
+            if(empty($errorMsg))
+                $this->store($_POST);
+        }
+
         require('../views/events/createEvent.php');
     }
 
@@ -58,7 +65,7 @@ class EventController implements CrudInterface {
 
         $stm->execute();
 
-        header('Location: ../event/myevents');
+        header('Location: myevents');
 
     }
 
@@ -70,6 +77,14 @@ class EventController implements CrudInterface {
     }
 
     public function edit(string $id) : void {
+
+        if(isset($_POST['edit'])) {
+            $errorMsg = ErrorsForm::eventForm();
+
+            if(empty($errorMsg))
+                $this->update($_POST);
+        }
+
         $editMode = true;
         $data = $this->show($id);
         require('../views/events/createEvent.php');
@@ -93,14 +108,14 @@ class EventController implements CrudInterface {
 
         $stm->execute();
 
-        header('Location: ../event/myevents');
+        header('Location: myevents');
     }
 
     public function destroy(string $id) : void {
         $stm = $this->connection->prepare("DELETE FROM events WHERE event_id = :id");
         $stm->execute([":id" => $id]);
 
-        header('Location: ../app');
+        header('Location: myevents');
     }
 
     public function getCreatorEvents() {
@@ -117,7 +132,7 @@ class EventController implements CrudInterface {
             $response[$key]['participants'] = $this->getParticipants($response[$key]['event_id']);
         }
 
-        require('../views/events/myevents.php');
+        require('../views/events/myEvents.php');
     }
 
     public function getCreatorName(string $user_id) : string {
@@ -150,7 +165,7 @@ class EventController implements CrudInterface {
 
         $stm->execute();
 
-        header('Location: ../app');
+        header('Location: show');
     }
 
     public function willIAttend(string $event_id) : bool {
@@ -166,6 +181,27 @@ class EventController implements CrudInterface {
         $stm->execute();
 
         return !empty($stm->fetch(\PDO::FETCH_NUM));
+    }
+
+    public function getAttendEvents() {
+        
+        $stm = $this->connection->prepare("SELECT * FROM events
+        INNER JOIN participants
+        ON participants.event_id = events.event_id
+        WHERE participants.user_id = :user_id
+        ");
+
+        $stm->execute([":user_id" => $_SESSION['id']] );
+
+        $response = $stm->fetchAll(\PDO::FETCH_ASSOC);
+
+        foreach($response as $key => $value) {
+            $response[$key]['participants'] = $this->getParticipants($response[$key]['event_id']);
+            $response[$key]['creator'] = $this->getCreatorName($response[$key]['creator_id']);
+        }
+        
+        require('../views/events/attendEvents.php');
+
     }
 
 }

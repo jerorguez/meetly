@@ -51,11 +51,6 @@ switch ($resource) {
         LoginController::logout();
         break;
 
-    case 'app':
-        Middleware::access('app');
-        require_once('../views/meetlyApp.php');
-        break;
-
     default:
         require_once('../views/404.php');
         break;
