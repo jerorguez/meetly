@@ -1,0 +1,79 @@
+\hypertarget{class_app_1_1_modules_1_1_validation_form}{}\doxysection{Validation\+Form Class Reference}
+\label{class_app_1_1_modules_1_1_validation_form}\index{ValidationForm@{ValidationForm}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_app_1_1_modules_1_1_validation_form_a82f18a47a99adc3a52008d0fe84affcc}{check\+Empty\+Post}} (array \$exceptions=\mbox{[}$\,$\mbox{]})
+\item 
+static \mbox{\hyperlink{class_app_1_1_modules_1_1_validation_form_aed0a8de2116703a7b8cca2670ed1fcf7}{check\+Email}} ()
+\item 
+static \mbox{\hyperlink{class_app_1_1_modules_1_1_validation_form_a7e543c141b9c329c718e8d04cd4eac24}{check\+String}} (array \$entries)
+\item 
+static \mbox{\hyperlink{class_app_1_1_modules_1_1_validation_form_ad12e3657f0f2da0562f6cefc9275137b}{check\+Confirm\+Passwords}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_app_1_1_modules_1_1_validation_form_ad12e3657f0f2da0562f6cefc9275137b}\label{class_app_1_1_modules_1_1_validation_form_ad12e3657f0f2da0562f6cefc9275137b}} 
+\index{ValidationForm@{ValidationForm}!checkConfirmPasswords@{checkConfirmPasswords}}
+\index{checkConfirmPasswords@{checkConfirmPasswords}!ValidationForm@{ValidationForm}}
+\doxysubsubsection{\texorpdfstring{checkConfirmPasswords()}{checkConfirmPasswords()}}
+{\footnotesize\ttfamily static check\+Confirm\+Passwords (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Verify password confirmation
+
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_modules_1_1_validation_form_aed0a8de2116703a7b8cca2670ed1fcf7}\label{class_app_1_1_modules_1_1_validation_form_aed0a8de2116703a7b8cca2670ed1fcf7}} 
+\index{ValidationForm@{ValidationForm}!checkEmail@{checkEmail}}
+\index{checkEmail@{checkEmail}!ValidationForm@{ValidationForm}}
+\doxysubsubsection{\texorpdfstring{checkEmail()}{checkEmail()}}
+{\footnotesize\ttfamily static check\+Email (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Filter to verify emails
+
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_modules_1_1_validation_form_a82f18a47a99adc3a52008d0fe84affcc}\label{class_app_1_1_modules_1_1_validation_form_a82f18a47a99adc3a52008d0fe84affcc}} 
+\index{ValidationForm@{ValidationForm}!checkEmptyPost@{checkEmptyPost}}
+\index{checkEmptyPost@{checkEmptyPost}!ValidationForm@{ValidationForm}}
+\doxysubsubsection{\texorpdfstring{checkEmptyPost()}{checkEmptyPost()}}
+{\footnotesize\ttfamily static check\+Empty\+Post (\begin{DoxyParamCaption}\item[{array}]{\$exceptions = {\ttfamily \mbox{[}\mbox{]}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Verify empty fields
+
+Checks the data sent through post and returns true if it contains empty data. Additionally you can pass an array with the field name to exclude it from validation.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$exceptions} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_modules_1_1_validation_form_a7e543c141b9c329c718e8d04cd4eac24}\label{class_app_1_1_modules_1_1_validation_form_a7e543c141b9c329c718e8d04cd4eac24}} 
+\index{ValidationForm@{ValidationForm}!checkString@{checkString}}
+\index{checkString@{checkString}!ValidationForm@{ValidationForm}}
+\doxysubsubsection{\texorpdfstring{checkString()}{checkString()}}
+{\footnotesize\ttfamily static check\+String (\begin{DoxyParamCaption}\item[{array}]{\$entries }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Filter to check string through regex \$regex\+String
+
+Receives an array by parameter with the POST value and returns false in case of finding strange characters (\$regex\+String).
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$entries} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+app/modules/Validation\+Form.\+php\end{DoxyCompactItemize}

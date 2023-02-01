@@ -1,0 +1,58 @@
+\hypertarget{class_app_1_1_controllers_1_1_login_controller}{}\doxysection{Login\+Controller Class Reference}
+\label{class_app_1_1_controllers_1_1_login_controller}\index{LoginController@{LoginController}}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_app_1_1_controllers_1_1_login_controller_a791a6e74b119d472a0c6ba2a7ca1b740}{login}} ()
+\item 
+static \mbox{\hyperlink{class_app_1_1_controllers_1_1_login_controller_ae7658c5336942eab79ad34299c229aa3}{check\+Security}} ()
+\item 
+static \mbox{\hyperlink{class_app_1_1_controllers_1_1_login_controller_a1e34160e903835a43123f538e93457a2}{logout}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_login_controller_ae7658c5336942eab79ad34299c229aa3}\label{class_app_1_1_controllers_1_1_login_controller_ae7658c5336942eab79ad34299c229aa3}} 
+\index{LoginController@{LoginController}!checkSecurity@{checkSecurity}}
+\index{checkSecurity@{checkSecurity}!LoginController@{LoginController}}
+\doxysubsubsection{\texorpdfstring{checkSecurity()}{checkSecurity()}}
+{\footnotesize\ttfamily static check\+Security (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Method for verifying session integrity
+
+This method implements a small security feature that verifies at all times if he user id corresponds to the stored email, so if any of the two data are changed, the user will be logged out.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_login_controller_a791a6e74b119d472a0c6ba2a7ca1b740}\label{class_app_1_1_controllers_1_1_login_controller_a791a6e74b119d472a0c6ba2a7ca1b740}} 
+\index{LoginController@{LoginController}!login@{login}}
+\index{login@{login}!LoginController@{LoginController}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily static login (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Method for user login
+
+When filling in the fields of the login form, check if the email address exists and if the password provided corresponds to the email address. Once verified, it creates a session with the data entered.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_login_controller_a1e34160e903835a43123f538e93457a2}\label{class_app_1_1_controllers_1_1_login_controller_a1e34160e903835a43123f538e93457a2}} 
+\index{LoginController@{LoginController}!logout@{logout}}
+\index{logout@{logout}!LoginController@{LoginController}}
+\doxysubsubsection{\texorpdfstring{logout()}{logout()}}
+{\footnotesize\ttfamily static logout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Method for user logout
+
+Calling this method deletes the created session, so the user is logged out.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+app/controllers/Login\+Controller.\+php\end{DoxyCompactItemize}

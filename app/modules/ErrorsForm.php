@@ -5,8 +5,27 @@ namespace App\Modules;
 use App\Modules\ValidationForm;
 use App\Controllers\UserController;
 
+/**
+ * class ErrorsForm
+ * 
+ * This class creates the validations and displays the error messages for each form.
+ * 
+ * PHP version: 8.1
+ * 
+ * @author Jerobel Rodriguez <github.com/jerorguez>
+ * @package App\Modules
+ * @license MIT
+ * @version 1.0.0
+ */
 class ErrorsForm {
 
+    /**
+     * Validation for user form
+     * 
+     * Validates the input fields and displays errors in case of errors. 
+     *
+     * It returns nothing if it has been correct and if it finds an error it returns the message.
+     */
     public static function userForm() {
 
         if (ValidationForm::checkEmptyPost(['surname_2'])) {
@@ -36,6 +55,13 @@ class ErrorsForm {
 
     }
 
+    /**
+     * Validation for event form
+     * 
+     * Validates the input fields and displays errors in case of errors. 
+     *
+     * It returns nothing if it has been correct and if it finds an error it returns the message.
+     */
     public static function eventForm() {
 
         if (ValidationForm::checkEmptyPost()) {

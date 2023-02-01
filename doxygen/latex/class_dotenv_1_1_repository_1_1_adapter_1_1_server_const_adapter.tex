@@ -1,0 +1,82 @@
+\hypertarget{class_dotenv_1_1_repository_1_1_adapter_1_1_server_const_adapter}{}\doxysection{Server\+Const\+Adapter Class Reference}
+\label{class_dotenv_1_1_repository_1_1_adapter_1_1_server_const_adapter}\index{ServerConstAdapter@{ServerConstAdapter}}
+Inheritance diagram for Server\+Const\+Adapter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_dotenv_1_1_repository_1_1_adapter_1_1_server_const_adapter}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dotenv_1_1_repository_1_1_adapter_1_1_server_const_adapter_ab7cb510c0407388f7efa654e896b7d65}{write}} (string \$name, string \$value)
+\item 
+\mbox{\hyperlink{class_dotenv_1_1_repository_1_1_adapter_1_1_server_const_adapter_a3702377c488cc3f291c4bea213134028}{delete}} (string \$name)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions inherited from \mbox{\hyperlink{interface_dotenv_1_1_repository_1_1_adapter_1_1_reader_interface}{Reader\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_dotenv_1_1_repository_1_1_adapter_1_1_reader_interface_a90cdb99bce97265bd8e0ec9a6b980ef9}{read}} (string \$name)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_dotenv_1_1_repository_1_1_adapter_1_1_writer_interface_ab7cb510c0407388f7efa654e896b7d65}{write}} (string \$name, string \$value)
+\item 
+\mbox{\hyperlink{interface_dotenv_1_1_repository_1_1_adapter_1_1_writer_interface_a3702377c488cc3f291c4bea213134028}{delete}} (string \$name)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+\doxysubsubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{interface_dotenv_1_1_repository_1_1_adapter_1_1_adapter_interface}{Adapter\+Interface}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{interface_dotenv_1_1_repository_1_1_adapter_1_1_adapter_interface_a239b1c70258014a86569483c2d009de6}{create}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dotenv_1_1_repository_1_1_adapter_1_1_server_const_adapter_a3702377c488cc3f291c4bea213134028}\label{class_dotenv_1_1_repository_1_1_adapter_1_1_server_const_adapter_a3702377c488cc3f291c4bea213134028}} 
+\index{ServerConstAdapter@{ServerConstAdapter}!delete@{delete}}
+\index{delete@{delete}!ServerConstAdapter@{ServerConstAdapter}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily delete (\begin{DoxyParamCaption}\item[{string}]{\$name }\end{DoxyParamCaption})}
+
+Delete an environment variable, if possible.
+
+
+\begin{DoxyParams}[1]{Parameters}
+non-\/empty-\/string & {\em \$name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_dotenv_1_1_repository_1_1_adapter_1_1_writer_interface_a3702377c488cc3f291c4bea213134028}{Writer\+Interface}}.
+
+\mbox{\Hypertarget{class_dotenv_1_1_repository_1_1_adapter_1_1_server_const_adapter_ab7cb510c0407388f7efa654e896b7d65}\label{class_dotenv_1_1_repository_1_1_adapter_1_1_server_const_adapter_ab7cb510c0407388f7efa654e896b7d65}} 
+\index{ServerConstAdapter@{ServerConstAdapter}!write@{write}}
+\index{write@{write}!ServerConstAdapter@{ServerConstAdapter}}
+\doxysubsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily write (\begin{DoxyParamCaption}\item[{string}]{\$name,  }\item[{string}]{\$value }\end{DoxyParamCaption})}
+
+Write to an environment variable, if possible.
+
+
+\begin{DoxyParams}[1]{Parameters}
+non-\/empty-\/string & {\em \$name} & \\
+\hline
+string & {\em \$value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_dotenv_1_1_repository_1_1_adapter_1_1_writer_interface_ab7cb510c0407388f7efa654e896b7d65}{Writer\+Interface}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+vendor/vlucas/phpdotenv/src/\+Repository/\+Adapter/Server\+Const\+Adapter.\+php\end{DoxyCompactItemize}

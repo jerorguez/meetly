@@ -1,0 +1,322 @@
+\hypertarget{class_app_1_1_controllers_1_1_event_controller}{}\doxysection{Event\+Controller Class Reference}
+\label{class_app_1_1_controllers_1_1_event_controller}\index{EventController@{EventController}}
+Inheritance diagram for Event\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_controllers_1_1_event_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_event_controller_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_event_controller_a149eb92716c1084a935e04a8d95f7347}{index}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_event_controller_a435e7d7525d4bcd0ed5e34a469f3adf6}{create}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_event_controller_a564787b198048c92a068fe31ce020f50}{store}} (array \$data)
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_event_controller_aa1084dca2023d0205f4d383a4fa3276d}{show}} (string \$id)
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_event_controller_a770dc774eb0c503adc8523130d7872a9}{edit}} (string \$id)
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_event_controller_aa62fad2569bc89ea8525ef0f7c6c45a9}{update}} (array \$data)
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_event_controller_a0fdd66e92be5c0f832383e1d2162563f}{destroy}} (string \$id)
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_event_controller_a58f673b128b2b30245245203d78d469a}{get\+Creator\+Events}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_event_controller_a1dcfb219e525b896884b2a81660e636b}{get\+Creator\+Name}} (string \$user\+\_\+id)
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_event_controller_acc9ec4cf509c1529c9faced293544635}{get\+Participants}} (string \$id)
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_event_controller_acb1d664128dd66e8ee6b9271182cc9d6}{attend}} (string \$event\+\_\+id)
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_event_controller_ad400050574be75f14756f9fe56530919}{will\+IAttend}} (string \$event\+\_\+id)
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_event_controller_a5b7053813f067e6b2c790f8dd7bdd2a9}{get\+Attend\+Events}} ()
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_a149eb92716c1084a935e04a8d95f7347}{index}} ()
+\item 
+\mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_a435e7d7525d4bcd0ed5e34a469f3adf6}{create}} ()
+\item 
+\mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_a564787b198048c92a068fe31ce020f50}{store}} (array \$data)
+\item 
+\mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_aa1084dca2023d0205f4d383a4fa3276d}{show}} (string \$id)
+\item 
+\mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_a770dc774eb0c503adc8523130d7872a9}{edit}} (string \$id)
+\item 
+\mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_aa62fad2569bc89ea8525ef0f7c6c45a9}{update}} (array \$data)
+\item 
+\mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_a0fdd66e92be5c0f832383e1d2162563f}{destroy}} (string \$id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_app_1_1_controllers_1_1_event_controller_ac93fbec81f07e5d15f80db907e63dc10}{get\+Instance}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_event_controller_a095c5d389db211932136b53f25f39685}\label{class_app_1_1_controllers_1_1_event_controller_a095c5d389db211932136b53f25f39685}} 
+\index{EventController@{EventController}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!EventController@{EventController}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\+\_\+\+\_\+construct()
+
+The constructor of this class when instantiated will take the instance of the Connection class and will store in the variable \$connection the connection to the database. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_event_controller_acb1d664128dd66e8ee6b9271182cc9d6}\label{class_app_1_1_controllers_1_1_event_controller_acb1d664128dd66e8ee6b9271182cc9d6}} 
+\index{EventController@{EventController}!attend@{attend}}
+\index{attend@{attend}!EventController@{EventController}}
+\doxysubsubsection{\texorpdfstring{attend()}{attend()}}
+{\footnotesize\ttfamily attend (\begin{DoxyParamCaption}\item[{string}]{\$event\+\_\+id }\end{DoxyParamCaption})}
+
+Inserts in the participants table the id of the event and the id of the logged in user. This way it is notified that the user is going to participate in that event.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$event\+\_\+id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_event_controller_a435e7d7525d4bcd0ed5e34a469f3adf6}\label{class_app_1_1_controllers_1_1_event_controller_a435e7d7525d4bcd0ed5e34a469f3adf6}} 
+\index{EventController@{EventController}!create@{create}}
+\index{create@{create}!EventController@{EventController}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Crud\+Interface\textquotesingle{}s method (create)
+
+Displays the form for the insertion of a new resource, if the \$\+\_\+\+POST does not pass the validations it returns an error in the html, otherwise it proceeds to store them.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_a435e7d7525d4bcd0ed5e34a469f3adf6}{Crud\+Interface}}.
+
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_event_controller_a0fdd66e92be5c0f832383e1d2162563f}\label{class_app_1_1_controllers_1_1_event_controller_a0fdd66e92be5c0f832383e1d2162563f}} 
+\index{EventController@{EventController}!destroy@{destroy}}
+\index{destroy@{destroy}!EventController@{EventController}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily destroy (\begin{DoxyParamCaption}\item[{string}]{\$id }\end{DoxyParamCaption})}
+
+Crud\+Interface\textquotesingle{}s method (destroy)
+
+Removes the resource with that id from the database.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_a0fdd66e92be5c0f832383e1d2162563f}{Crud\+Interface}}.
+
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_event_controller_a770dc774eb0c503adc8523130d7872a9}\label{class_app_1_1_controllers_1_1_event_controller_a770dc774eb0c503adc8523130d7872a9}} 
+\index{EventController@{EventController}!edit@{edit}}
+\index{edit@{edit}!EventController@{EventController}}
+\doxysubsubsection{\texorpdfstring{edit()}{edit()}}
+{\footnotesize\ttfamily edit (\begin{DoxyParamCaption}\item[{string}]{\$id }\end{DoxyParamCaption})}
+
+Crud\+Interface\textquotesingle{}s method (edit)
+
+Displays the form to edit an event table resource with the data filled in through the id. In case of passing the validations it calls the update() method. It is important to pass the id also through \$\+\_\+\+POST.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_a770dc774eb0c503adc8523130d7872a9}{Crud\+Interface}}.
+
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_event_controller_a5b7053813f067e6b2c790f8dd7bdd2a9}\label{class_app_1_1_controllers_1_1_event_controller_a5b7053813f067e6b2c790f8dd7bdd2a9}} 
+\index{EventController@{EventController}!getAttendEvents@{getAttendEvents}}
+\index{getAttendEvents@{getAttendEvents}!EventController@{EventController}}
+\doxysubsubsection{\texorpdfstring{getAttendEvents()}{getAttendEvents()}}
+{\footnotesize\ttfamily get\+Attend\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Displays all events to be attended by the logged in user.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_event_controller_a58f673b128b2b30245245203d78d469a}\label{class_app_1_1_controllers_1_1_event_controller_a58f673b128b2b30245245203d78d469a}} 
+\index{EventController@{EventController}!getCreatorEvents@{getCreatorEvents}}
+\index{getCreatorEvents@{getCreatorEvents}!EventController@{EventController}}
+\doxysubsubsection{\texorpdfstring{getCreatorEvents()}{getCreatorEvents()}}
+{\footnotesize\ttfamily get\+Creator\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Displays all events created by the logged in user.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_event_controller_a1dcfb219e525b896884b2a81660e636b}\label{class_app_1_1_controllers_1_1_event_controller_a1dcfb219e525b896884b2a81660e636b}} 
+\index{EventController@{EventController}!getCreatorName@{getCreatorName}}
+\index{getCreatorName@{getCreatorName}!EventController@{EventController}}
+\doxysubsubsection{\texorpdfstring{getCreatorName()}{getCreatorName()}}
+{\footnotesize\ttfamily get\+Creator\+Name (\begin{DoxyParamCaption}\item[{string}]{\$user\+\_\+id }\end{DoxyParamCaption})}
+
+Returns the name of the creator of an event through its user id.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$user\+\_\+id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_event_controller_ac93fbec81f07e5d15f80db907e63dc10}\label{class_app_1_1_controllers_1_1_event_controller_ac93fbec81f07e5d15f80db907e63dc10}} 
+\index{EventController@{EventController}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!EventController@{EventController}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily static get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Singleton for Isntance
+
+Returns the instance if it is already created and stores it in \$instance, otherwise it creates it.
+
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_event_controller_acc9ec4cf509c1529c9faced293544635}\label{class_app_1_1_controllers_1_1_event_controller_acc9ec4cf509c1529c9faced293544635}} 
+\index{EventController@{EventController}!getParticipants@{getParticipants}}
+\index{getParticipants@{getParticipants}!EventController@{EventController}}
+\doxysubsubsection{\texorpdfstring{getParticipants()}{getParticipants()}}
+{\footnotesize\ttfamily get\+Participants (\begin{DoxyParamCaption}\item[{string}]{\$id }\end{DoxyParamCaption})}
+
+Returns the number of participants of an event through the event id.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_event_controller_a149eb92716c1084a935e04a8d95f7347}\label{class_app_1_1_controllers_1_1_event_controller_a149eb92716c1084a935e04a8d95f7347}} 
+\index{EventController@{EventController}!index@{index}}
+\index{index@{index}!EventController@{EventController}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Crud\+Interface\textquotesingle{}s method (index)
+
+Displays all the resources in the event table.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_a149eb92716c1084a935e04a8d95f7347}{Crud\+Interface}}.
+
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_event_controller_aa1084dca2023d0205f4d383a4fa3276d}\label{class_app_1_1_controllers_1_1_event_controller_aa1084dca2023d0205f4d383a4fa3276d}} 
+\index{EventController@{EventController}!show@{show}}
+\index{show@{show}!EventController@{EventController}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily show (\begin{DoxyParamCaption}\item[{string}]{\$id }\end{DoxyParamCaption})}
+
+Crud\+Interface\textquotesingle{}s method (show)
+
+Returns the event from our database with the required id.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_aa1084dca2023d0205f4d383a4fa3276d}{Crud\+Interface}}.
+
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_event_controller_a564787b198048c92a068fe31ce020f50}\label{class_app_1_1_controllers_1_1_event_controller_a564787b198048c92a068fe31ce020f50}} 
+\index{EventController@{EventController}!store@{store}}
+\index{store@{store}!EventController@{EventController}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{array}]{\$data }\end{DoxyParamCaption})}
+
+Crud\+Interface\textquotesingle{}s method (store)
+
+Stores the new recourse in the database, this method is called by create().
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_a564787b198048c92a068fe31ce020f50}{Crud\+Interface}}.
+
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_event_controller_aa62fad2569bc89ea8525ef0f7c6c45a9}\label{class_app_1_1_controllers_1_1_event_controller_aa62fad2569bc89ea8525ef0f7c6c45a9}} 
+\index{EventController@{EventController}!update@{update}}
+\index{update@{update}!EventController@{EventController}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily update (\begin{DoxyParamCaption}\item[{array}]{\$data }\end{DoxyParamCaption})}
+
+Crud\+Interface\textquotesingle{}s method (update)
+
+After editing a resource, this function is called to store the edited resource in the database.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_aa62fad2569bc89ea8525ef0f7c6c45a9}{Crud\+Interface}}.
+
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_event_controller_ad400050574be75f14756f9fe56530919}\label{class_app_1_1_controllers_1_1_event_controller_ad400050574be75f14756f9fe56530919}} 
+\index{EventController@{EventController}!willIAttend@{willIAttend}}
+\index{willIAttend@{willIAttend}!EventController@{EventController}}
+\doxysubsubsection{\texorpdfstring{willIAttend()}{willIAttend()}}
+{\footnotesize\ttfamily will\+IAttend (\begin{DoxyParamCaption}\item[{string}]{\$event\+\_\+id }\end{DoxyParamCaption})}
+
+This method returns true if the logged in user is going to attend the event. The event id is required.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$event\+\_\+id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+app/controllers/Event\+Controller.\+php\end{DoxyCompactItemize}

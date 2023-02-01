@@ -1,0 +1,177 @@
+\hypertarget{interface_app_1_1_interfaces_1_1_crud_interface}{}\doxysection{Crud\+Interface Interface Reference}
+\label{interface_app_1_1_interfaces_1_1_crud_interface}\index{CrudInterface@{CrudInterface}}
+Inheritance diagram for Crud\+Interface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_app_1_1_interfaces_1_1_crud_interface}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_a149eb92716c1084a935e04a8d95f7347}{index}} ()
+\item 
+\mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_a435e7d7525d4bcd0ed5e34a469f3adf6}{create}} ()
+\item 
+\mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_a564787b198048c92a068fe31ce020f50}{store}} (array \$data)
+\item 
+\mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_aa1084dca2023d0205f4d383a4fa3276d}{show}} (string \$id)
+\item 
+\mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_a770dc774eb0c503adc8523130d7872a9}{edit}} (string \$id)
+\item 
+\mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_aa62fad2569bc89ea8525ef0f7c6c45a9}{update}} (array \$data)
+\item 
+\mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_a0fdd66e92be5c0f832383e1d2162563f}{destroy}} (string \$id)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{interface_app_1_1_interfaces_1_1_crud_interface_a435e7d7525d4bcd0ed5e34a469f3adf6}\label{interface_app_1_1_interfaces_1_1_crud_interface_a435e7d7525d4bcd0ed5e34a469f3adf6}} 
+\index{CrudInterface@{CrudInterface}!create@{create}}
+\index{create@{create}!CrudInterface@{CrudInterface}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Displays a form to insert a new resource
+
+Calling this function should redirect or display the form for the insertion of a new resource in the database.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_app_1_1_controllers_1_1_event_controller_a435e7d7525d4bcd0ed5e34a469f3adf6}{Event\+Controller}}, and \mbox{\hyperlink{class_app_1_1_controllers_1_1_user_controller_a435e7d7525d4bcd0ed5e34a469f3adf6}{User\+Controller}}.
+
+\mbox{\Hypertarget{interface_app_1_1_interfaces_1_1_crud_interface_a0fdd66e92be5c0f832383e1d2162563f}\label{interface_app_1_1_interfaces_1_1_crud_interface_a0fdd66e92be5c0f832383e1d2162563f}} 
+\index{CrudInterface@{CrudInterface}!destroy@{destroy}}
+\index{destroy@{destroy}!CrudInterface@{CrudInterface}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily destroy (\begin{DoxyParamCaption}\item[{string}]{\$id }\end{DoxyParamCaption})}
+
+Eliminates a resource
+
+After passing the id of the resource, proceed to delete it from the database.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_app_1_1_controllers_1_1_event_controller_a0fdd66e92be5c0f832383e1d2162563f}{Event\+Controller}}, and \mbox{\hyperlink{class_app_1_1_controllers_1_1_user_controller_a0fdd66e92be5c0f832383e1d2162563f}{User\+Controller}}.
+
+\mbox{\Hypertarget{interface_app_1_1_interfaces_1_1_crud_interface_a770dc774eb0c503adc8523130d7872a9}\label{interface_app_1_1_interfaces_1_1_crud_interface_a770dc774eb0c503adc8523130d7872a9}} 
+\index{CrudInterface@{CrudInterface}!edit@{edit}}
+\index{edit@{edit}!CrudInterface@{CrudInterface}}
+\doxysubsubsection{\texorpdfstring{edit()}{edit()}}
+{\footnotesize\ttfamily edit (\begin{DoxyParamCaption}\item[{string}]{\$id }\end{DoxyParamCaption})}
+
+Displays a form for editing a resource
+
+Displays a filled form with the data to be edited from the id provided.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_app_1_1_controllers_1_1_event_controller_a770dc774eb0c503adc8523130d7872a9}{Event\+Controller}}, and \mbox{\hyperlink{class_app_1_1_controllers_1_1_user_controller_a770dc774eb0c503adc8523130d7872a9}{User\+Controller}}.
+
+\mbox{\Hypertarget{interface_app_1_1_interfaces_1_1_crud_interface_a149eb92716c1084a935e04a8d95f7347}\label{interface_app_1_1_interfaces_1_1_crud_interface_a149eb92716c1084a935e04a8d95f7347}} 
+\index{CrudInterface@{CrudInterface}!index@{index}}
+\index{index@{index}!CrudInterface@{CrudInterface}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Displays all resources in the database
+
+The correct way to use it is to generate a variable with the result of the query before the require to the html or php code.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_app_1_1_controllers_1_1_event_controller_a149eb92716c1084a935e04a8d95f7347}{Event\+Controller}}, and \mbox{\hyperlink{class_app_1_1_controllers_1_1_user_controller_a149eb92716c1084a935e04a8d95f7347}{User\+Controller}}.
+
+\mbox{\Hypertarget{interface_app_1_1_interfaces_1_1_crud_interface_aa1084dca2023d0205f4d383a4fa3276d}\label{interface_app_1_1_interfaces_1_1_crud_interface_aa1084dca2023d0205f4d383a4fa3276d}} 
+\index{CrudInterface@{CrudInterface}!show@{show}}
+\index{show@{show}!CrudInterface@{CrudInterface}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily show (\begin{DoxyParamCaption}\item[{string}]{\$id }\end{DoxyParamCaption})}
+
+Displays a specific resource
+
+Displays a specific resource from the database when its id is passed.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_app_1_1_controllers_1_1_event_controller_aa1084dca2023d0205f4d383a4fa3276d}{Event\+Controller}}, and \mbox{\hyperlink{class_app_1_1_controllers_1_1_user_controller_aa1084dca2023d0205f4d383a4fa3276d}{User\+Controller}}.
+
+\mbox{\Hypertarget{interface_app_1_1_interfaces_1_1_crud_interface_a564787b198048c92a068fe31ce020f50}\label{interface_app_1_1_interfaces_1_1_crud_interface_a564787b198048c92a068fe31ce020f50}} 
+\index{CrudInterface@{CrudInterface}!store@{store}}
+\index{store@{store}!CrudInterface@{CrudInterface}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{array}]{\$data }\end{DoxyParamCaption})}
+
+Registers the new resource in the database
+
+When this function is called after passing the necessary validations, the new resource will be stored in the database.
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$data} & =\texorpdfstring{$>$}{>} Data sent by \$\+\_\+\+POST \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_app_1_1_controllers_1_1_event_controller_a564787b198048c92a068fe31ce020f50}{Event\+Controller}}, and \mbox{\hyperlink{class_app_1_1_controllers_1_1_user_controller_a564787b198048c92a068fe31ce020f50}{User\+Controller}}.
+
+\mbox{\Hypertarget{interface_app_1_1_interfaces_1_1_crud_interface_aa62fad2569bc89ea8525ef0f7c6c45a9}\label{interface_app_1_1_interfaces_1_1_crud_interface_aa62fad2569bc89ea8525ef0f7c6c45a9}} 
+\index{CrudInterface@{CrudInterface}!update@{update}}
+\index{update@{update}!CrudInterface@{CrudInterface}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily update (\begin{DoxyParamCaption}\item[{array}]{\$data }\end{DoxyParamCaption})}
+
+Updates the resource within the database
+
+When sent to call it updates the resource in the database after passing the necessary validations. The form should send the id per post and include it in the \$data
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_app_1_1_controllers_1_1_event_controller_aa62fad2569bc89ea8525ef0f7c6c45a9}{Event\+Controller}}, and \mbox{\hyperlink{class_app_1_1_controllers_1_1_user_controller_aa62fad2569bc89ea8525ef0f7c6c45a9}{User\+Controller}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+app/interfaces/Crud\+Interface.\+php\end{DoxyCompactItemize}

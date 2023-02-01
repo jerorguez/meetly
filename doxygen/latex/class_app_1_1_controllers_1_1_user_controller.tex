@@ -1,0 +1,260 @@
+\hypertarget{class_app_1_1_controllers_1_1_user_controller}{}\doxysection{User\+Controller Class Reference}
+\label{class_app_1_1_controllers_1_1_user_controller}\index{UserController@{UserController}}
+Inheritance diagram for User\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_app_1_1_controllers_1_1_user_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_user_controller_a095c5d389db211932136b53f25f39685}{\+\_\+\+\_\+construct}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_user_controller_a149eb92716c1084a935e04a8d95f7347}{index}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_user_controller_a435e7d7525d4bcd0ed5e34a469f3adf6}{create}} ()
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_user_controller_a564787b198048c92a068fe31ce020f50}{store}} (array \$data)
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_user_controller_aa1084dca2023d0205f4d383a4fa3276d}{show}} (string \$id)
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_user_controller_a770dc774eb0c503adc8523130d7872a9}{edit}} (string \$id)
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_user_controller_aa62fad2569bc89ea8525ef0f7c6c45a9}{update}} (array \$data)
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_user_controller_a0fdd66e92be5c0f832383e1d2162563f}{destroy}} (string \$id)
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_user_controller_a98654683d9c89f7ca5785f2ceeb3d374}{check\+Email\+Exist}} (string \$email)
+\item 
+\mbox{\hyperlink{class_app_1_1_controllers_1_1_user_controller_ab767ffdc0385509f3f5887278752d900}{check\+By\+Email}} (string \$email)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_a149eb92716c1084a935e04a8d95f7347}{index}} ()
+\item 
+\mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_a435e7d7525d4bcd0ed5e34a469f3adf6}{create}} ()
+\item 
+\mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_a564787b198048c92a068fe31ce020f50}{store}} (array \$data)
+\item 
+\mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_aa1084dca2023d0205f4d383a4fa3276d}{show}} (string \$id)
+\item 
+\mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_a770dc774eb0c503adc8523130d7872a9}{edit}} (string \$id)
+\item 
+\mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_aa62fad2569bc89ea8525ef0f7c6c45a9}{update}} (array \$data)
+\item 
+\mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_a0fdd66e92be5c0f832383e1d2162563f}{destroy}} (string \$id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_app_1_1_controllers_1_1_user_controller_ac93fbec81f07e5d15f80db907e63dc10}{get\+Instance}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_user_controller_a095c5d389db211932136b53f25f39685}\label{class_app_1_1_controllers_1_1_user_controller_a095c5d389db211932136b53f25f39685}} 
+\index{UserController@{UserController}!\_\_construct@{\_\_construct}}
+\index{\_\_construct@{\_\_construct}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{\_\_construct()}{\_\_construct()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+construct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\+\_\+\+\_\+construct()
+
+The constructor of this class when instantiated will take the instance of the Connection class and will store in the variable \$connection the connection to the database. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_user_controller_ab767ffdc0385509f3f5887278752d900}\label{class_app_1_1_controllers_1_1_user_controller_ab767ffdc0385509f3f5887278752d900}} 
+\index{UserController@{UserController}!checkByEmail@{checkByEmail}}
+\index{checkByEmail@{checkByEmail}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{checkByEmail()}{checkByEmail()}}
+{\footnotesize\ttfamily check\+By\+Email (\begin{DoxyParamCaption}\item[{string}]{\$email }\end{DoxyParamCaption})}
+
+Returns a user\textquotesingle{}s data via email
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$email} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_user_controller_a98654683d9c89f7ca5785f2ceeb3d374}\label{class_app_1_1_controllers_1_1_user_controller_a98654683d9c89f7ca5785f2ceeb3d374}} 
+\index{UserController@{UserController}!checkEmailExist@{checkEmailExist}}
+\index{checkEmailExist@{checkEmailExist}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{checkEmailExist()}{checkEmailExist()}}
+{\footnotesize\ttfamily check\+Email\+Exist (\begin{DoxyParamCaption}\item[{string}]{\$email }\end{DoxyParamCaption})}
+
+Verify if the email passed by parameters already exists in our database. Returns true if found.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$email} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_user_controller_a435e7d7525d4bcd0ed5e34a469f3adf6}\label{class_app_1_1_controllers_1_1_user_controller_a435e7d7525d4bcd0ed5e34a469f3adf6}} 
+\index{UserController@{UserController}!create@{create}}
+\index{create@{create}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Crud\+Interface\textquotesingle{}s method (create)
+
+Displays the form for the insertion of a new resource, if the \$\+\_\+\+POST does not pass the validations it returns an error in the html, otherwise it proceeds to store them.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_a435e7d7525d4bcd0ed5e34a469f3adf6}{Crud\+Interface}}.
+
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_user_controller_a0fdd66e92be5c0f832383e1d2162563f}\label{class_app_1_1_controllers_1_1_user_controller_a0fdd66e92be5c0f832383e1d2162563f}} 
+\index{UserController@{UserController}!destroy@{destroy}}
+\index{destroy@{destroy}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily destroy (\begin{DoxyParamCaption}\item[{string}]{\$id }\end{DoxyParamCaption})}
+
+Crud\+Interface\textquotesingle{}s method (destroy)
+
+Removes the resource with that id from the database.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_a0fdd66e92be5c0f832383e1d2162563f}{Crud\+Interface}}.
+
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_user_controller_a770dc774eb0c503adc8523130d7872a9}\label{class_app_1_1_controllers_1_1_user_controller_a770dc774eb0c503adc8523130d7872a9}} 
+\index{UserController@{UserController}!edit@{edit}}
+\index{edit@{edit}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{edit()}{edit()}}
+{\footnotesize\ttfamily edit (\begin{DoxyParamCaption}\item[{string}]{\$id }\end{DoxyParamCaption})}
+
+Crud\+Interface\textquotesingle{}s method (edit)
+
+Not required in this program
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_a770dc774eb0c503adc8523130d7872a9}{Crud\+Interface}}.
+
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_user_controller_ac93fbec81f07e5d15f80db907e63dc10}\label{class_app_1_1_controllers_1_1_user_controller_ac93fbec81f07e5d15f80db907e63dc10}} 
+\index{UserController@{UserController}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily static get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Singleton for Isntance
+
+Returns the instance if it is already created and stores it in \$instance, otherwise it creates it.
+
+\begin{DoxyReturn}{Returns}
+self 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_user_controller_a149eb92716c1084a935e04a8d95f7347}\label{class_app_1_1_controllers_1_1_user_controller_a149eb92716c1084a935e04a8d95f7347}} 
+\index{UserController@{UserController}!index@{index}}
+\index{index@{index}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{index()}{index()}}
+{\footnotesize\ttfamily index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Crud\+Interface\textquotesingle{}s method (index)
+
+We are not interested in knowing all the users, so when we try to access through the router, we are returned to page 404.
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_a149eb92716c1084a935e04a8d95f7347}{Crud\+Interface}}.
+
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_user_controller_aa1084dca2023d0205f4d383a4fa3276d}\label{class_app_1_1_controllers_1_1_user_controller_aa1084dca2023d0205f4d383a4fa3276d}} 
+\index{UserController@{UserController}!show@{show}}
+\index{show@{show}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily show (\begin{DoxyParamCaption}\item[{string}]{\$id }\end{DoxyParamCaption})}
+
+Crud\+Interface\textquotesingle{}s method (show)
+
+Returns the user from our database with the required id.
+
+
+\begin{DoxyParams}[1]{Parameters}
+string & {\em \$id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_aa1084dca2023d0205f4d383a4fa3276d}{Crud\+Interface}}.
+
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_user_controller_a564787b198048c92a068fe31ce020f50}\label{class_app_1_1_controllers_1_1_user_controller_a564787b198048c92a068fe31ce020f50}} 
+\index{UserController@{UserController}!store@{store}}
+\index{store@{store}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily store (\begin{DoxyParamCaption}\item[{array}]{\$data }\end{DoxyParamCaption})}
+
+Crud\+Interface\textquotesingle{}s method (store)
+
+Stores the new recourse in the database, this method is called by create().
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_a564787b198048c92a068fe31ce020f50}{Crud\+Interface}}.
+
+\mbox{\Hypertarget{class_app_1_1_controllers_1_1_user_controller_aa62fad2569bc89ea8525ef0f7c6c45a9}\label{class_app_1_1_controllers_1_1_user_controller_aa62fad2569bc89ea8525ef0f7c6c45a9}} 
+\index{UserController@{UserController}!update@{update}}
+\index{update@{update}!UserController@{UserController}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily update (\begin{DoxyParamCaption}\item[{array}]{\$data }\end{DoxyParamCaption})}
+
+Crud\+Interface\textquotesingle{}s method (update)
+
+Not required in this program
+
+
+\begin{DoxyParams}[1]{Parameters}
+array & {\em \$data} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_app_1_1_interfaces_1_1_crud_interface_aa62fad2569bc89ea8525ef0f7c6c45a9}{Crud\+Interface}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+app/controllers/User\+Controller.\+php\end{DoxyCompactItemize}
