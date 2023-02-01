@@ -223,6 +223,7 @@ class EventController implements CrudInterface {
 
         foreach($response as $key => $value) {
             $response[$key]['participants'] = $this->getParticipants($response[$key]['event_id']);
+            $response[$key]['creator'] = $this->getCreatorName($response[$key]['creator_id']);
         }
 
         require('../views/events/myEvents.php');

@@ -23,7 +23,7 @@ class Middleware {
      * Controls access to certain pages depending on whether the 
      * user is logged in or not.
      * 
-     * @param class $resource
+     * @param string $resource
      * @param string $id
      * @return void
      */

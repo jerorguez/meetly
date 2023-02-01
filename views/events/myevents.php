@@ -24,7 +24,7 @@ require_once(__DIR__ . '/../components/headerMeetly.php');
                         <p class="card-text"><span class="fw-bold">Descripción:</span><br><?= $data['description'] ?></p>
                         <p class="card-text"><span class="fw-bold">Asistentes:</span> <?= $data['participants'] ?></p>
                         <p class="card-text"><span class="fw-bold">Lugar:</span> <?= $data['place'] ?></p>
-                        <p class="card-text"><span class="fw-bold">Organizador:</span> <?= $data['creator'] ?></p>
+                        <p class="card-text text-capitalize"><span class="fw-bold">Organizador:</span> <?= $data['creator'] ?></p>
                     </div>
                     <div class="card-footer d-flex justify-content-between align-items-center">
                         <p class="m-0"><span class="fw-bold">Fecha: </span><?= $data['date'] ?></p>
