@@ -25,7 +25,7 @@ switch ($resource) {
 
     case '/':
     case 'index':
-        Middleware::access('/');
+        // Middleware::access('/');
         require_once('../views/frontPage.php');
         break;
 
@@ -42,7 +42,7 @@ switch ($resource) {
         break;
     
     case 'login':
-        Middleware::access('login');
+        // Middleware::access('login');
         LoginController::login();
         break;
 
