@@ -21,7 +21,6 @@ $id = $path[1] ?? null;
 
 $router = new RouterHandler();
 
-
 switch ($resource) {
 
     case '/':
