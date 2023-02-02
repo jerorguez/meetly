@@ -10,11 +10,6 @@
             "Router\\" : "router/"
         }
     },
-    "scripts": {
-        "post-install-cmd": [
-            "vendor/bin/heroku-php-apache2"
-        ]
-    },
     "authors": [
         {
             "name": "Jerobel Rodriguez"
