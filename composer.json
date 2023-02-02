@@ -5,9 +5,9 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Database\\" : "./database",
-            "App\\" : "./src",
-            "Router\\" : "./router"
+            "Database\\" : "database/",
+            "App\\" : "app/",
+            "Router\\" : "router/"
         }
     },
     "authors": [
